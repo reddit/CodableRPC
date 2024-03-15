@@ -59,6 +59,8 @@ case .pong(let currentTime):
 }
 ```
 
+The included [example project](https://github.com/reddit/CodableRPC/tree/main/Example) demonstrates using CodableRPC to communicate between a UI test and the iOS app under test.
+
 ## Configuration
 
 Both `RPCServer` and `RPCClient` can be initialized with custom configurations, though the defaults should be reasonable for simple workloads. See the documentation on `RPCServerConfig` and `RPCClientConfig` for details.

@@ -3,7 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "CodableRPC",
-    platforms: [.macOS(.v11)],
+    platforms: [
+      .macOS(.v14),
+      .iOS(.v13)
+    ],
     products: [
       .library(
         name: "CodableRPC",

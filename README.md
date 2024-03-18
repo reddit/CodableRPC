@@ -1,6 +1,6 @@
 # CodableRPC
 
-CodableRPC is a general purpose RPC client & server implemented in Swift based on [SwiftNIO](https://github.com/apple/swift-nio). It uses Swift's [Codable](https://developer.apple.com/documentation/swift/encoding-decoding-and-serialization) for serialization, enabling you to write idiomatic and type-safe method calls.
+CodableRPC is a general purpose RPC client & server implemented in Swift that uses [Codable](https://developer.apple.com/documentation/swift/encoding-decoding-and-serialization) for serialization, enabling you to write idiomatic and type-safe procedure calls.
 
 While a general purpose RPC implementation, Reddit uses CodableRPC to support ad hoc communication between XCTest UI tests and the iOS app.
 
@@ -59,7 +59,7 @@ case .pong(let currentTime):
 }
 ```
 
-The included [example project](https://github.com/reddit/CodableRPC/tree/main/Example) demonstrates using CodableRPC to communicate between a UI test and the iOS app under test.
+The included [example project](https://github.com/reddit/CodableRPC/tree/main/Example) demonstrates using CodableRPC to communicate between a UI test and the iOS app under test. Notice that the example project declares the `ExampleRPCMethod` enum in a target that is imported by both the app target and the test target, whereas the `RPCMethodPerformable` conformance is declared in a target that is only imported by the app target. This setup is necessary to decouple your test target from the dependencies that implement the RPC methods.
 
 ## Configuration
 
